@@ -16,7 +16,7 @@ def write_wallets(data):
     with open(WALLET_FILE, "w") as f:
         json.dump(data, f, indent=4)
 
-class Wallet(commands.Cog):
+class wallet(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -73,4 +73,4 @@ class Wallet(commands.Cog):
             )
 
 async def setup(bot):
-    await bot.add_cog(Wallet(bot))
+    await bot.add_cog(wallet(bot))

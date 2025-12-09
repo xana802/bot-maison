@@ -15,7 +15,7 @@ def save_prana():
     with open("prana.json", "w") as f:
         json.dump(prana_data, f, indent=4)
 
-class Prana(commands.Cog):
+class prana(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -73,4 +73,4 @@ class Prana(commands.Cog):
         )
 
 async def setup(bot):
-    await bot.add_cog(Prana(bot))
+    await bot.add_cog(prana(bot))

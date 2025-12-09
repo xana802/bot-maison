@@ -2,12 +2,12 @@ from discord.ext import commands
 import discord
 import random
 
-class Lance(commands.Cog):
+class roll(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @discord.app_commands.command(name="lance", description="lance les dés avec un nombre de faces personnalisé")
-    async def lance(self,interaction, nombre: int, face: int = 6):
+    @discord.app_commands.command(name="roll", description="lance les dés avec un nombre de faces personnalisé")
+    async def roll(self,interaction, nombre: int, face: int = 20):
         n=nombre
         f=face
         if n <= 0 or f <= 1:
@@ -39,4 +39,4 @@ class Lance(commands.Cog):
         await interaction.response.send_message(f"🎲 **{n} dés à {f} faces :** **{resultats}**\n🔢 **Total :** **{total}\n {commentaire}")
 
 async def setup(bot):
-    await bot.add_cog(Lance(bot))
+    await bot.add_cog(roll(bot))

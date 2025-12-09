@@ -7,7 +7,7 @@ class Malus(commands.Cog):
         self.bot = bot
 
     @discord.app_commands.command(name="malus", description="come le /lance mais pour les malus")
-    async def lance(self,interaction, nombre: int, face: int = 6):
+    async def malus(self,interaction, nombre: int, face: int = 20):
         n=nombre
         f=face
         if n <= 0 or f <= 1:

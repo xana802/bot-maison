@@ -29,7 +29,7 @@ def save_message(message: discord.Message, folder: str):
         f.write(f"{time} {author}: {message.content}\n")
 
 
-class RpCommands(commands.Cog):
+class rpCommands(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.rp_active = False
@@ -68,4 +68,4 @@ class RpCommands(commands.Cog):
 
 
 async def setup(bot):
-    await bot.add_cog(RpCommands(bot))
+    await bot.add_cog(rpCommands(bot))

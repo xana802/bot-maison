@@ -2,7 +2,7 @@ from discord.ext import commands
 import discord
 from discord import app_commands
 
-class naration(commands.Cog):
+class Naration(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         
@@ -20,4 +20,4 @@ class naration(commands.Cog):
         await interaction.followup.send(embed=embed)
 
 async def setup(bot):
-    await bot.add_cog(naration(bot))
+    await bot.add_cog(Naration(bot))
